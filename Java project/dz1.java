@@ -17,21 +17,21 @@ public class dz1 {
         n = binary.length() - 1;
         System.out.println(String.format("Номер старшего значащего бита числа %s: %s", i, n));
 
-        int numbers = SizeArray(i, maxValue, n, "multiple");
+        int numbers = SizeArray(i, maxValue, "multiple");
         System.out.println(String.format("Количество кратных %s элементов на диапазоне от %s до %s: %s", n, i, maxValue, numbers));
        
         int[] m1 = new int[numbers];
-        FillArray(i, maxValue, n, "multiple", m1);
+        FillArray(i, maxValue, "multiple", m1);
 
-        numbers = SizeArray(minValue, i, n, "non-multiple");
+        numbers = SizeArray(minValue, i, "non-multiple");
         System.out.println(String.format("Количество некратных %s элементов на диапазоне от %s до %s: %s", n, minValue, i, numbers));
-        
+
         int[] m2 = new int[numbers];
-        FillArray(minValue, i, n, "non-multiple", m2);
+        FillArray(minValue, i, "non-multiple", m2);
         
     }
 
-    static int SizeArray(int min, int max, int quot, String mode){
+    static int SizeArray(int min, int max, String mode){
         int numbers = 0;
         for (int j = min; j < max; j++)
         {
@@ -42,7 +42,7 @@ public class dz1 {
         return numbers;
     }
 
-    static void FillArray(int min, int max, int quot, String mode, int[] array){
+    static void FillArray(int min, int max, String mode, int[] array){
         for (int j = min, num = 0; j < max; j++)
         {
             if (mode == "multiple") if (j % n == 0){
