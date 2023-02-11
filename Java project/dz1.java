@@ -24,8 +24,8 @@ public class dz1 {
         FillArray(i, maxValue, n, "multiple", m1);
 
         numbers = SizeArray(minValue, i, n, "non-multiple");
-        
         System.out.println(String.format("Количество некратных %s элементов на диапазоне от %s до %s: %s", n, minValue, i, numbers));
+        
         int[] m2 = new int[numbers];
         FillArray(minValue, i, n, "non-multiple", m2);
         
