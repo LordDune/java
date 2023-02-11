@@ -28,7 +28,6 @@ public class dz1 {
 
         int[] m2 = new int[numbers];
         FillArray(minValue, i, "non-multiple", m2);
-        
     }
 
     static int SizeArray(int min, int max, String mode){
