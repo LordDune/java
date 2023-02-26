@@ -11,12 +11,12 @@ public class dz5 {
         hm.put("5", "пять");
         hm.put("6", "шесть");
 
-        showMap(hm); // один, два, три, четыре, пять, шесть,
+        showMap(hm); // один два три четыре пять шесть 
 
         for (String item: hm.keySet()){
             hm.compute(item, (k, v) -> v + "!");
         }
-        showMap(hm); // один!, два!, три!, четыре!, пять!, шесть!,
+        showMap(hm); // один! два! три! четыре! пять! шесть!
 
         HashMap<String,String> hm2 = new HashMap<>();
         hm2.put("1", "dog");
@@ -29,11 +29,11 @@ public class dz5 {
         for (String item: hm2.keySet()){
             hm2.merge(item, hm.getOrDefault(item, ""), (v1 , v2) -> v2 + v1);
         }
-        showMap(hm2); // cat, cow, tiger, один!dog, три!bird, пять!bear,
+        showMap(hm2); // cat cow tiger один!dog три!bird пять!bear 
     }
     static void showMap(HashMap<String,String> map){
         for (String item: map.values()){
-            System.out.print(item + ", ");
+            System.out.print(item + " ");
         }
         System.out.println("");
     }
